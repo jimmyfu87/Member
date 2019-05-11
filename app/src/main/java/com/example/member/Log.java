@@ -32,6 +32,7 @@ public class Log extends AppCompatActivity {
         final EditText etpassword=(EditText) findViewById(R.id.password);
         final Button blogin=(Button)findViewById(R.id.Log);
         final Button reg=(Button)findViewById(R.id.Reg);
+        final Button forget=(Button)findViewById(R.id.Forget);
 
         blogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +79,13 @@ public class Log extends AppCompatActivity {
             Log.this.startActivity(registerIntent);
         }
     });
-
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgetIntent=new Intent(Log.this,Forgetpassword.class);
+                Log.this.startActivity(forgetIntent);
+            }
+        });
 
 
     }

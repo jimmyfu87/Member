@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
                             if (success) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                                 builder.setMessage("註冊成功")
-                                        .setPositiveButton("確定", new DialogInterface.OnClickListener() {
+                                        .setPositiveButton("知道了", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent = new Intent(Register.this, Log.class);
@@ -55,8 +55,8 @@ public class Register extends AppCompatActivity {
 
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
-                                builder.setMessage("Register Failed")
-                                        .setNegativeButton("Retry", null)
+                                builder.setMessage("註冊失敗，此帳號已有人註冊")
+                                        .setPositiveButton("知道了", null)
                                         .create()
                                         .show();
                             }
